@@ -26,7 +26,15 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['.herokuapp.com']
 
-
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'youremail@gmail.com' #my gmail username
+# EMAIL_HOST_PASSWORD = 'yourpassword' #my gmail password
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# DEFAULT_FROM_EMAIL = "Justin <hungrypy@gmail.com>"
+#
+# ADMINS = [('Justin', EMAIL_HOST_USER)]
+# MANAGERS = ADMINS
 # Application definition
 
 INSTALLED_APPS = [
@@ -36,6 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap3',
+    'pages',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +64,7 @@ ROOT_URLCONF = 'ideas.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
