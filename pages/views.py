@@ -11,7 +11,3 @@ class HomeView(CreateView):
     template_name = 'pages/home.html'
     form_class = JoinForm
     success_url = '/'
-
-    def form_valid(self, form):
-        email = form.cleaned_data.get('email')
-        return super(HomeView, self).from_valid(form)
