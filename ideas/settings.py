@@ -24,7 +24,7 @@ SECRET_KEY = 'm$krjz0!_krnxnxu_aspxf4$+5n7a%n(z6#d5hqd0l7o2u7#$#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','.herokuapp.com']
+ALLOWED_HOSTS = ['0.0.0.0','.herokuapp.com']
 
 # EMAIL_HOST = 'smtp.gmail.com'
 # EMAIL_HOST_USER = 'youremail@gmail.com' #my gmail username
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'bootstrap3',
     'pages',
+    'newsletter',
 ]
 
 MIDDLEWARE = [

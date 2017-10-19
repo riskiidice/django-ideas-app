@@ -1,7 +1,6 @@
 {% extends "base.html" %}
-
+{% load bootstrap3 %}
 {% block content %}
-
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -51,7 +50,15 @@
        </div>
         <div class="col-md-4">
           <h2>Join us</h2>
-          <p><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfPS05y93ODMVoCQ4O-VpPhjlzYUBq8ZDZPVL_B4eUM3oHMzA/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">กำลังโหลด...</iframe></p>
+          <form action="" method="post" class="form">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+              <button type="submit" class="btn btn-primary">
+                {% bootstrap_icon "asterisk" %} Submit
+              </button>
+            {% endbuttons %}
+          </form>
         </div>
       </div>
 
